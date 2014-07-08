@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body style="width: 1024px; font-family: 'Courier New', Courier, monospace;">
+    <h1>Jared and Laura&#8217;s Wedding Website</h2>
+    <nav name="top">
+        <a href="/#top">Home</a> |
+        <a href="/#service">Service</a> |
+        <a href="/#party">Party</a> |
+        <a href="/#celebrate">Texas and Oregon Celebrations</a> |
+        <a href="/#accommodations">Accommodations</a> |
+        <a href="/registry">Registry</a>
+        <a href="{{ url|safe }}" style="float: right;">{{ url_linktext }}</a>
+    </nav>
+    <hr/>
+    <div style="width: 600px;">
+        <h2> Registry</h2>
+        <p style="color: red;">
+        {% if notes %}
+            You are logged in as {{name}} and that will be permanently recorded 
+            along with any actions you take here.
+        {% else %}
+            You need to be logged in if you want people to know who you are.
+        {% endif %}
+        </p>
+        <p>
+            I may have lied a little. The registry isn&#8217;t complete, but if you&#8217;ve
+            something to say or would like to make a group announcement add 
+            a note here.
+        </p>
+
+        {% for greeting in greetings %}
+        {% if greeting.author %}
+            <b>{{ greeting.author.nickname() }}</b> wrote:
+        {% else %}
+        An anonymous person wrote:
+        {% endif %}
+        <blockquote>{{ greeting.content }}</blockquote>
+        {% endfor %}
+
+        <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+            <div><textarea name="content" rows="3" cols="60"></textarea></div>
+            <div><input type="submit" value="Leave a note for everyone to see"></div>
+        </form>
+        <!---
+        <form>Guestbook name:
+            <input value="{{ guestbook_name }}" name="guestbook_name">
+            <input type="submit" value="switch">
+        </form>
+        --->
+
+
+    </div>
+    <hr/>
+     <nav name="top">
+        <a href="/#top">Home</a> |
+        <a href="/#service">Service</a> |
+        <a href="/#party">Party</a> |
+        <a href="/#celebrate">Texas and Oregon Celebrations</a> |
+        <a href="/#accommodations">Accommodations</a> |
+        <a href="/registry">Registry</a>
+        <a href="{{ url|safe }}" style="float: right;">{{ url_linktext }}</a>
+    </nav>
+
+    <p>Please don&#8217;t ask if you can design this website.</p>
+  </body>
+</html>
+{% endautoescape %}
