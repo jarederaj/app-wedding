@@ -18,7 +18,9 @@ Examples
 --------
 
 **run locally**
-google_appengine/dev_appserver.py app-wedding/
+
+    google_appengine/dev_appserver.py app-wedding/
 
 **deployment**
-google_appengine/appcfg.py update app-wedding/
+
+    google_appengine/appcfg.py update app-wedding/
