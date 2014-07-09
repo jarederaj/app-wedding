@@ -12,7 +12,7 @@ Requires
 --------
 
 * Python 2.7
-* [google appengine python 2.7 SDK])(https://developers.google.com/appengine/downloads)
+* [google appengine python 2.7 SDK](https://developers.google.com/appengine/downloads)
 
 Examples
 --------
