@@ -1,8 +1,8 @@
 App Wedding
 -----------
 
-A simple google appengine based wedding website. Should be easy to form and 
-manipulate.
+A simple google appengine based wedding website. Should be easy to fork and 
+manipulate to your own needs.
 
 Modify app.yaml so it fits your own deployment
 
