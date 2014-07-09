@@ -1,99 +1,83 @@
-<!DOCTYPE html>
-{% autoescape true %}
-<html>
-  <body style="width: 1024px; font-family: 'Courier New', Courier, monospace;">
-    <h1>Jared and Laura&#8217;s Wedding Website</h2>
-    <nav name="top">
-        <a href="/#top">Home</a> |
-        <a href="/#service">Service</a> |
-        <a href="/#party">Party</a> |
-        <a href="/#celebrate">Texas and Oregon Celebrations</a> |
-        <a href="/#accommodations">Accommodations</a> |
-        <a href="/registry">Registry</a>
-        <a href="{{ url|safe }}" style="float: right;">{{ url_linktext }}</a>
-    </nav>
+{% extends "templates/baseNav.html" %}
+{% block content %}
+<article>
+    <p>
+        We&#8217;re getting married on Sunday, August 17, 2014 at (Time).
+    </p>
+    <p>
+        We like to think of this as simply a church service and a party. 
+        The church service is at 
+        <a target="_blank" href="https://www.google.com/maps/preview?client=ubuntu&channel=fs&oe=utf-8&ie=UTF-8&fb=1&gl=us&cid=16712967341551596114&q=Christ+Our+Hope+Anglican+Church&ei=doy9U8y5K8GGyASWx4JY&ved=0CH8Q_BIwCg">
+            Christ Our Hope Anglican Church inFort Collins</a>, and the party is in 
+        <a target="_blank" href="https://www.google.com/maps/place/3539+County+Road+32/@40.219234,-104.988395,17z/data=!3m1!4b1!4m2!3m1!1s0x876c072ad8f873f1:0x80ec34fda9a0e424">
+            Mark and Emily Maeda&#8217;s front yard in Mead, Colorado</a>.
+    </p>
     <hr/>
-    <div style="width: 600px;">
-        <article>
-            <a name="home" href="#top"><h2 >Home</h2></a>
-            <p>
-                We&#8217;re getting married on Sunday, August 17, 2014 at (Time).
-            </p>
-            <p>
-                We like to think of this as simply a church service and a party. 
-                The church service is at Christ Our Hope Anglican Church in Fort 
-                Collins, and the party is in Mark and Emily Maeda&#8217;s front yard in 
-                Mead.
-            </p>
-        </article>
-        <hr/>
-        <article>
-            <a name="service" href="#top"><h1>Service </h1></a>
-            <p>
-                Attire: Casual Sunday Dress
-            </p>
-            <p>
-                We&#8217;ll say &#8220;I will&#8221; at Christ Our Hope Anglican Church with 
-                beautiful music and ancient liturgy. Much like any ordinary Sunday 
-                at our church, this traditional Anglican service will have two 
-                parts: the liturgy of the word (where we say our vows, have some 
-                readings and prayers) and the liturgy of the table (Eucharist or 
-                communion service).
-            </p>
-        </article>
-        <hr/>
-        <article>
-            <a name="party" href="#top"><h1>Party</h1></a>
-            <p>
-                Our friends, Mark and Emily Maeda, generously offered their front 
-                yard for a reception after the ceremony. We&#8217;ll have plenty of food 
-                and beer in a beautiful place with our friends and family. Kid and 
-                adult&ndash;friendly. Wear sensible shoes or kick your shoes off.
-            </p>
+</article>
+<article>
+    <a name="service" href="#top"><h1>Service </h1></a>
+    <p>
+        Attire: Casual Sunday Dress
+    </p>
+    <p>
+        We&#8217;ll say &#8220;I will&#8221; at Christ Our Hope 
+        Anglican Church with beautiful music and ancient liturgy. Much 
+        like any ordinary Sunday at our church, this traditional 
+        Anglican service will have two parts: the liturgy of the word 
+        (where we say our vows, have some readings and prayers) and the 
+        liturgy of the table (Eucharist or communion service).
+    </p>
+    <hr/>
+</article>
+<article>
+    <a name="party" href="#top"><h1>Party</h1></a>
+    <p>
+        Our friends, Mark and Emily Maeda, generously offered their 
+        front yard for a reception after the ceremony. We&#8217;ll have 
+        plenty of food and beer in a happy place with our friends 
+        and family. Kid and adult&ndash;friendly. Wear sensible shoes 
+        or kick your shoes off.
+    </p>
+    <p>
+    <a target="_blank" href="https://www.google.com/maps/place/3539+County+Road+32/@40.219234,-104.988395,17z/data=!3m1!4b1!4m2!3m1!1s0x876c072ad8f873f1:0x80ec34fda9a0e424"> 
+        Go to the Maeda&#8217;s house in Mead</a>, about 30 minutes south of 
+    Fort Collins.
+    <p>
+    <hr/>
+</article>
+<article>
+    <a name="celebrate" href="#top"><h1>Regional Celebrations</h1></a>
+    <p>
+        We realize that a two&ndash;month long engagement means not 
+        everyone can make it to the actual 
+        ceremony&mdash;&mdash;that&#8217;s okay! We&#8217;re also 
+        celebrating in Texas (Labor Day Weekend) and Oregon (Date TBD) 
+        for family and friends. More information to come.
+    </p>
+    <hr/>
+</article>
+<article>
+    <a name="accommodations" href="#top"><h1 >Accommodations</h1></a>
+    <p>
+        More info to come.
+    </p>
+    <hr/>
+</article>
+<article>
+    <a name="registry" href="#top"><h1>Registry</h1></a>
+    <p>
+        Jared doesn&#8217;t like fancy internet things so he built <a 
+        href="/registry">something simple</a> instead. It would be nice if 
+        you logged in before using it.
+    </p>
+    <hr/>
+</article>
+<article>
+    <a name="rsvp" href="/rsvp"><h1>RSVP</h1></a>
+    <p>
+        You only need to <a href="/rsvp">RSVP once</a>. If you badger me about 
+        it I can add a feature that allows you to review what you added there.
+    </p>
+</article>
 
-            <p>
-                Directions to the Maeda&#8217;s house in Mead, about 30 minutes south of 
-                Fort Collins.
-            <p>
-        </article>
-        <hr/>
-        <article>
-            <a name="celebrate" href="#top"><h1>Regional Celebrations</h1></a>
-            <p>
-                We realize that a two&ndash;month long engagement means not everyone can 
-                make it to the actual ceremony&mdash;&mdash;that&#8217;s okay! We&#8217;re also celebrating 
-                in Texas (Labor Day Weekend) and Oregon (Date TBD) for family and 
-                friends. More information to come.
-            </p>
-        </article>
-        <hr/>
-        <article>
-            <a name="accommodations" href="#top"><h1 >Accommodations</h1></a>
-            <p>
-                More info to come.
-            </p>
-        </article>
-        <hr/>
-        <article>
-            <a name="registry" href="#top"><h1>Registry</h1></a>
-            <p>
-            Jared doesn&#8217;t like fancy interet things so he built <a 
-                href="/registry">something simple</a> instead. It would be nice if 
-            you logged in before using it.
-            </p>
-        </article>
-    </div>
-    <hr/>
-     <nav name="top">
-        <a href="/#top">Home</a> |
-        <a href="/#service">Service</a> |
-        <a href="/#party">Party</a> |
-        <a href="/#celebrate">Texas and Oregon Celebrations</a> |
-        <a href="/#accommodations">Accommodations</a> |
-        <a href="/registry">Registry</a>
-        <a href="{{ url|safe }}" style="float: right;">{{ url_linktext }}</a>
-    </nav>
-    <p>Please don&#8217;t ask if you can design this website.</p>
-  </body>
-</html>
-{% endautoescape %}
+{% endblock %}

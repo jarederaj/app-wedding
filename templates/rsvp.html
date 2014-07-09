@@ -1,0 +1,66 @@
+{% extends "templates/baseNav.html" %}
+{% block content %}
+<p>Please help us to plan for your attendance by filling out this form.</p>
+<form action="" method="post">
+    <div style="width: 550px;">
+        <div>
+            <label for="fullName">Your Full Name</label><br />
+            <input type="text" id="fullName" name="fullName" value="">
+            <hr/>
+        </div>
+        <div>
+            <label for="email">Email Address (not required)</label><br />
+            <input type="text" id="email" name="email" value="">
+            <hr/>
+        </div>
+        <div>
+            <label for="willAttendWedding">Will you and your family be attending the wedding?</label><br />
+            <select id="willAttendWedding" name="willAttendWedding">
+                <option value=""></option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+            <hr/>
+        </div>
+        <div>
+            <label for="willAttendReception">Will you and your family be attending the reception?</label><br />
+            <select id="willAttendReception" name="willAttendReception">
+                <option value=""></option>
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+            <hr/>
+        </div>
+        <div>
+            <label for="attendants">
+                Please enter the number of family members you will bring (not 
+                including yourself) or <strong>enter &#8220;1&#8221; for your 
+                significant other</strong>
+            </label><br />
+            <select id="attendants" name="attendants">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <hr/>
+        </div>
+        <div>
+            <label for="note">Note</label><br />
+            <textarea name="note" id="note" rows="3" cols="60"></textarea>
+            <hr/>
+        </div>
+        <div>
+            <input type="hidden" id="nickname" name="nickname" value="{{name}}">
+            <input type="submit" value="Send RSVP">
+        </div>
+    </div>
+</form>
+{% endblock %}
+
