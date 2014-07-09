@@ -1,5 +1,5 @@
 App Wedding
-###########
+-----------
 
 A simple google appengine based wedding website. Should be easy to form and 
 manipulate.
