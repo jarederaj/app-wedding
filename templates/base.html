@@ -4,18 +4,21 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:html5="http://www.w3.org/1999/xhtml" >
   <head>
     
-    <title>Jared and Laura’s Green Wedding Website&mdash;{{title}}</title>
+  <title>Jared and Laura’s Green Wedding Website&mdash;{{title}}</title>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <style>
         body {
             width: 1024px;
             font-family: 'Courier New', Courier, monospace; 
         }
-        h1, h2, h3, hr, footer {
+        h1, h2, h3, hr, footer, b, h1 a {
             color: #060;
         }
         .alert {
             color: red;
+        }
+        .small {
+            font-size: 0.8em;
         }
     </style>
     <script>
@@ -29,7 +32,10 @@
   </head>
   <body>
     <header>
-        <h1>Jared and Laura&#8217;s Green Wedding Website</h2>
+        <h1>Jared and Laura&#8217;s <a 
+                target="_blank"
+                href="http://en.wikipedia.org/wiki/Ordinary_Time">
+            Green</a> Wedding Website</h2>
         <p class="alert">{{_get.msg}}</p>
     </header>
     {% block topNav %}{% endblock %}
