@@ -66,6 +66,7 @@ class RSVP(ndb.Model):
     author = ndb.UserProperty()
     fullName = ndb.StringProperty(indexed=False)
     nickname = ndb.StringProperty(indexed=False)
+    email = ndb.StringProperty(indexed=False)
     note = ndb.TextProperty(indexed=False)
     willAttendWedding = ndb.TextProperty(indexed=False)
     willAttendReception = ndb.TextProperty(indexed=False)
@@ -89,6 +90,7 @@ class Response(webapp2.RequestHandler):
 
         rsvp.fullName = self.request.get('fullName')
         rsvp.nickname = self.request.get('nickname')
+        rsvp.email = self.request.get('email')
         rsvp.willAttendWedding = self.request.get('willAttendWedding')
         rsvp.willAttendReception = self.request.get('willAttendReception')
         rsvp.attendants = int(self.request.get('attendants'))
