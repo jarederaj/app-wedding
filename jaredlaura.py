@@ -90,7 +90,7 @@ class Response(webapp2.RequestHandler):
         rsvp.fullName = self.request.get('fullName')
         rsvp.nickname = self.request.get('nickname')
         rsvp.willAttendWedding = self.request.get('willAttendWedding')
-        rsvp.willAttendReception = self.request.get('Wedding')
+        rsvp.willAttendReception = self.request.get('willAttendReception')
         rsvp.attendants = int(self.request.get('attendants'))
         rsvp.note = self.request.get('note')
         rsvp.put()
