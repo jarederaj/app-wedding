@@ -1,0 +1,40 @@
+{% extends "templates/baseNav.html" %}
+{% block content %}
+<h2> Message Board</h2>
+
+<p style="color: red;">
+{% if notes %}
+    You are logged in as {{name}} and that will be permanently recorded 
+    along with any actions you take here.
+{% else %}
+    You need to be logged in if you want people to know who you are.
+{% endif %}
+</p>
+<p>
+   If you&#8217;ve something to say or would like to make a group announcement 
+   add a note here.
+</p>
+
+<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+    <div><textarea name="content" rows="3" cols="60"></textarea></div>
+    <div><input type="submit" value="Leave a note for everyone to see"></div>
+</form>
+<br/>
+
+{% for greeting in greetings %}
+{% if greeting.author %}
+    <b>{{ greeting.author.nickname() }}</b> wrote:
+{% else %}
+An anonymous person wrote:
+{% endif %}
+<blockquote>{{ greeting.content }}</blockquote>
+<hr />
+{% endfor %}
+
+<!---
+<form>Guestbook name:
+    <input value="{{ guestbook_name }}" name="guestbook_name">
+    <input type="submit" value="switch">
+</form>
+--->
+{% endblock %}

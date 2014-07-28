@@ -100,7 +100,7 @@ class Response(webapp2.RequestHandler):
 
 
 
-class Registry(webapp2.RequestHandler):
+class MessageBoard(webapp2.RequestHandler):
     def get(self):
         guestbookName = self.request.get('guestbookName',
                                           DEFAULT_GUESTBOOK_NAME)
@@ -112,6 +112,13 @@ class Registry(webapp2.RequestHandler):
         pageVars['greetings'] =  greetings
         pageVars['guestbookName'] = urllib.quote_plus(guestbookName)
 
+        template = JINJA_ENVIRONMENT.get_template('templates/messageboard.html')
+        self.response.write(template.render(pageVars))
+
+
+class Registry(webapp2.RequestHandler):
+    def get(self):
+        pageVars = globalVals(self)
         template = JINJA_ENVIRONMENT.get_template('templates/registry.html')
         self.response.write(template.render(pageVars))
 
@@ -136,6 +143,7 @@ class Guestbook(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/registry', Registry),
+    ('/messageboard', MessageBoard),
     ('/rsvp', Response),
     ('/responded', Response),
     ('/sign', Guestbook),

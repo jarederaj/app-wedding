@@ -1,40 +1,83 @@
 {% extends "templates/baseNav.html" %}
 {% block content %}
 <h2> Registry</h2>
-<p style="color: red;">
-{% if notes %}
-    You are logged in as {{name}} and that will be permanently recorded 
-    along with any actions you take here.
-{% else %}
-    You need to be logged in if you want people to know who you are.
-{% endif %}
-</p>
+    <a target="_blank"
+        href="http://www.myregistry.com/wedding-registry/Laura-Price-Jared-Hall-Fort-Collins-CO/697984">
+        MyRegistry.com List</a> |
+    <!--<a target="_blank"
+        href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
+        The Kitchenette List<!--</a>-->
+
+    <p>
+        Jared doesn&#8217;t like fancy internet things but didn&#8217;t 
+        bother to build something simple instead. (It would be nice if you 
+        went to <a href="messageboard">that page</a> and saw all the clever 
+        things there, but it&#8217;s a shell of its former glory.)
+    </p>
+
+    <p>
+        Laura encouraged Jared to use one fancy internet tool, 
+        <a target="_blank"
+            href="http://www.myregistry.com/wedding-registry/Laura-Price-Jared-Hall-Fort-Collins-CO/697984">
+        myregistry.com</a>.
+        We registered for items at various stores, and items not available at The Kitchenette are
+        available in one list at <a target="_blank"
+            href="http://www.myregistry.com/wedding-registry/Laura-Price-Jared-Hall-Fort-Collins-CO/697984">
+            myregistry.com</a>. If you want to do this in the most painless 
+        way possible, just go there. Or, view the list of stores where we 
+        have registered for items.
+    </p>
+
+    <p>
+        We're registered for many of our kitchen items at
+<!--        <a target="_blank"
+            href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
+        The Kitchenette<!--</a> -->
+        in Price Hardware in Atlanta, Texas. Items can be shipped easily. 
+    </p>
+    <p>
+        Our complete list of registries is below. 
+    </p>
+
+<h3>The message board has moved under its proper label!</h3>
 <p>
-    I may have lied a little. The registry isn&#8217;t complete, but if you&#8217;ve
-    something to say or would like to make a group announcement add 
-    a note here.
+    Go say something strange on the <a href="messageboard">message board</a>!
 </p>
-
-<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
-    <div><textarea name="content" rows="3" cols="60"></textarea></div>
-    <div><input type="submit" value="Leave a note for everyone to see"></div>
-</form>
-<br/>
-
-{% for greeting in greetings %}
-{% if greeting.author %}
-    <b>{{ greeting.author.nickname() }}</b> wrote:
-{% else %}
-An anonymous person wrote:
-{% endif %}
-<blockquote>{{ greeting.content }}</blockquote>
-<hr />
-{% endfor %}
-
-<!---
-<form>Guestbook name:
-    <input value="{{ guestbook_name }}" name="guestbook_name">
-    <input type="submit" value="switch">
-</form>
---->
+<h3>Unnecessary list of registries</h3>
+<ul>
+    <li>
+    <!--<a target="_blank"
+        href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
+        The Kitchenette List<!--</a>-->
+    </li>
+    <li>
+        <a target="_blank"
+            href="http://www.myregistry.com/wedding-registry/Laura-Price-Jared-Hall-Fort-Collins-CO/697984">
+            myregistry.com</a>
+    </li>
+    <li>
+        <a target="_blank"
+            href="http://www.rei.com/GiftRegistryDetails/GR94858709?cm_mmc=aff_AL-_-416-_-452-_-Custom+Link&avad=452_e6d5b1cb&url=http%3A%2F%2Fwww.rei.com%2FGiftRegistryDetails%2FGR94858709%3Fcm_mmc%3Daff_AL-_-416-_-452-_-Custom%2BLink%26avad%3D452_e6d5b1cb&avad=452_e6d5b1cb">
+            REI
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            href="http://www.amazon.com/registry/wedding/2R5W8VOAJJQ98">
+            amazon.com
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            href="http://www.potterybarn.com/registry/3549768/registry-list.html?bnrid=3317500&cm_ven=AfRegistry&cm_cat=MyRegistry+LLC&cm_pla=CJ&cm_ite=Std">
+            Pottery Barn
+        </a>
+    </li>
+    <li>
+        <a target="_blank"
+            href="http://www.westelm.com/wishlist/2td96prnwp/wishlist.html?bnrid=3917500&cm_ven=AfRegistry&cm_cat=MyRegistry+LLC&cm_pla=CJ&cm_ite=Std">
+            West Elm
+        </a>
+    </li>
+</ul>
 {% endblock %}
