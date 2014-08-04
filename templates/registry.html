@@ -1,12 +1,16 @@
 {% extends "templates/baseNav.html" %}
 {% block content %}
-<h2> Registry</h2>
+    <h1>Registry</h1>
+    <a href="#artists">
+        Artists</a> |
+    <a href="#sirens">
+        All Lists</a> | 
     <a target="_blank"
         href="http://www.myregistry.com/wedding-registry/Laura-Price-Jared-Hall-Fort-Collins-CO/697984">
-        MyRegistry.com List</a> |
+        MyRegistry.com</a> |
     <!--<a target="_blank"
         href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
-        The Kitchenette List<!--</a>-->
+        The Kitchenette<!--</a>-->
 
     <p>
         Jared doesn&#8217;t like fancy internet things but didn&#8217;t 
@@ -29,7 +33,7 @@
     </p>
 
     <p>
-        We're registered for many of our kitchen items at
+        We&#8217;re registered for many of our kitchen items at
 <!--        <a target="_blank"
             href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
         The Kitchenette<!--</a> -->
@@ -39,16 +43,32 @@
         Our complete list of registries is below. 
     </p>
 
-<h3>The message board has moved under its proper label!</h3>
+<a  name="artists" href="#top"><h2>Artists and artwork</h2></a>
 <p>
-    Go say something strange on the <a href="messageboard">message board</a>!
+    There&#8217;s a backstory here: friends of ours recently got married and 
+    apparently received artwork that they hadn&#8217;t asked for and 
+    didn&#8217;t want. If you  choose to give art, we would like to a) support 
+    local artists and b) get pieces that we love. 
+</p>  
+<p>
+    Please be sensitive to the schedules and concerns of artists. We do not 
+    need a lot of art and do not have many walls to put it on. 
+</p>  
+<p>
+    <strong>Photography: Gabriele Woolever</strong><br/>
+    (970) 690-4692
 </p>
-<h3>Unnecessary list of registries</h3>
+<p>
+    <strong>Fiber Art: Sandra J. Hopkins</strong> <br/>
+    website: <a href="http://sandrajhopkins.com">sandrajhopkins.com</a> <br/>
+    (970) 988-5201
+</p>
+<a name="sirens" href="#top"><h2>Unnecessary list of registries</h2></a>
 <ul>
     <li>
     <!--<a target="_blank"
         href="http://www.yourweddingregistry.com/merchgift/gl.asp">-->
-        The Kitchenette List<!--</a>-->
+        The Kitchenette<!--</a>-->
     </li>
     <li>
         <a target="_blank"
@@ -80,4 +100,9 @@
         </a>
     </li>
 </ul>
+<h2>The message board has moved under its proper label!</h2>
+<p>
+    Go say something strange on the <a href="messageboard">message board</a>!
+</p>
+
 {% endblock %}
